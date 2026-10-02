@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #064D3B;
+    --burgundy: #7A1624;
+    --gold: #C89B3C;
+    --cream: #F6F0E4;
+    --espresso: #241711;
+  }
+
+  * {
+    border-color: rgba(200, 155, 60, 0.2);
+  }
+
+  body {
+    background-color: #F6F0E4;
+    color: #241711;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Custom luxury scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F6F0E4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C89B3C;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a67d28;
+}
+
+/* Jaipur miniature manuscript framing detail */
+.jaipur-frame {
+  position: relative;
+}
+
+.jaipur-frame::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  border: 1px solid rgba(200, 155, 60, 0.35);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Royal corner bracket ornaments */
+.royal-corners {
+  position: relative;
+}
+
+.royal-corners::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid #C89B3C;
+  border-left: 2px solid #C89B3C;
+  pointer-events: none;
+}
+
+.royal-corners::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 14px;
+  height: 14px;
+  border-bottom: 2px solid #C89B3C;
+  border-right: 2px solid #C89B3C;
+  pointer-events: none;
+}
+
+/* Gold foil hairline divider */
+.gold-hairline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200, 155, 60, 0.5) 20%, rgba(200, 155, 60, 0.8) 50%, rgba(200, 155, 60, 0.5) 80%, transparent);
+}
+
+/* Label caps apothecary style */
+.label-caps {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Hide scrollbar for clean drag carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
